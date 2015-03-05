@@ -51,6 +51,10 @@ class CreateUserController: UIViewController {
     func createAccount(){
         println("create account, name: \(nameField.text), phone: \(phoneField.text)")
 
+        var home: HomeViewController = HomeViewController()
+        var navigationController = UINavigationController(rootViewController: home)
+        self.presentViewController(navigationController, animated: true, completion: nil)
+        
         //now do the api call
         
     }

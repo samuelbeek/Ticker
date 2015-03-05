@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D7138E8C-B82B-4DEE-AEDB-9DC813AAE0EE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Ticker</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B913090D0C3942EC66013F2C3E5B3538B24CA69D</key>
+		<string>https://github.com/samuelbeek/Ticker.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Ticker.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B913090D0C3942EC66013F2C3E5B3538B24CA69D</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/samuelbeek/Ticker.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B913090D0C3942EC66013F2C3E5B3538B24CA69D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B913090D0C3942EC66013F2C3E5B3538B24CA69D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Ticker</string>
+		</dict>
+	</array>
+</dict>
+</plist>

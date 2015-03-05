@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let createUserViewController: CreateUserController = CreateUserController();
-
+    let homeViewController: HomeViewController = HomeViewController();
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window                         = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window!.backgroundColor        = UIColor.whiteColor()
-        self.window!.rootViewController     = self.createUserViewController
+        self.window!.rootViewController     = self.homeViewController
         self.window!.makeKeyAndVisible()
 
         

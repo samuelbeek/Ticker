@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Tosti. All rights reserved.
 //
 
-import UIkit
+import UIKit
 
 //styles
 let labelFont = UIFont(name: "Helvetica-Bold", size: ptp(36))

@@ -12,6 +12,8 @@
 		7E93075F1AA8585C0069CCEF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E93075E1AA8585C0069CCEF /* HomeViewController.swift */; };
 		7ECE679C1AA84EFD00F2ACB6 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE679A1AA84EFD00F2ACB6 /* Device.swift */; };
 		7ECE679D1AA84EFD00F2ACB6 /* StatusBarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE679B1AA84EFD00F2ACB6 /* StatusBarHelper.swift */; };
+		7ED2680E1AA86AC900082972 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED2680D1AA86AC900082972 /* User.swift */; };
+		7ED268101AA86D0D00082972 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED2680F1AA86D0D00082972 /* FriendCell.swift */; };
 		7EFB65D41AA8448F004CDE1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB65D31AA8448F004CDE1E /* AppDelegate.swift */; };
 		7EFB65DB1AA8448F004CDE1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EFB65DA1AA8448F004CDE1E /* Images.xcassets */; };
 		7EFB65DE1AA8448F004CDE1E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EFB65DC1AA8448F004CDE1E /* LaunchScreen.xib */; };
@@ -39,6 +41,9 @@
 		7E93075E1AA8585C0069CCEF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Controllers/HomeViewController.swift; sourceTree = "<group>"; };
 		7ECE679A1AA84EFD00F2ACB6 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Helpers/Device.swift; sourceTree = "<group>"; };
 		7ECE679B1AA84EFD00F2ACB6 /* StatusBarHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusBarHelper.swift; path = Helpers/StatusBarHelper.swift; sourceTree = "<group>"; };
+		7ED268081AA861AF00082972 /* Ticker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ticker-Bridging-Header.h"; sourceTree = "<group>"; };
+		7ED2680D1AA86AC900082972 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7ED2680F1AA86D0D00082972 /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendCell.swift; path = Views/FriendCell.swift; sourceTree = "<group>"; };
 		7EFB65CE1AA8448F004CDE1E /* Ticker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ticker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EFB65D31AA8448F004CDE1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EFB65DA1AA8448F004CDE1E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -123,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				7EFB65FC1AA845AD004CDE1E /* Info.plist */,
+				7ED268081AA861AF00082972 /* Ticker-Bridging-Header.h */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -166,6 +172,7 @@
 		7EFB65F71AA844FD004CDE1E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7ED2680D1AA86AC900082972 /* User.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -174,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				7E93075C1AA8575D0069CCEF /* TickerTextfield.swift */,
+				7ED2680F1AA86D0D00082972 /* FriendCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -338,6 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ED268101AA86D0D00082972 /* FriendCell.swift in Sources */,
 				7EFB65FB1AA845A2004CDE1E /* CreateUserController.swift in Sources */,
 				7EFB65FF1AA84751004CDE1E /* StylesHelper.swift in Sources */,
 				7EFB66031AA84C79004CDE1E /* KaedeTextField.swift in Sources */,
@@ -346,6 +355,7 @@
 				7E93075F1AA8585C0069CCEF /* HomeViewController.swift in Sources */,
 				7EFB65D41AA8448F004CDE1E /* AppDelegate.swift in Sources */,
 				7EFB66041AA84C79004CDE1E /* TextFieldsEffects.swift in Sources */,
+				7ED2680E1AA86AC900082972 /* User.swift in Sources */,
 				7ECE679D1AA84EFD00F2ACB6 /* StatusBarHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,9 +472,12 @@
 			baseConfigurationReference = AB46462EB88640EC5B6F9B3E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Ticker/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Ticker/Ticker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -473,9 +486,11 @@
 			baseConfigurationReference = B5437468CFFA104CDD3D6372 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Ticker/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Ticker/Ticker-Bridging-Header.h";
 			};
 			name = Release;
 		};
