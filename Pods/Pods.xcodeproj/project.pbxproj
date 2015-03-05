@@ -7,247 +7,247 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1283758E8B1C991632580E7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2226D897FB0F42348A03FF8A /* Foundation.framework */; };
-		1664D90B08704162F0BA4FC6 /* APAddressBook-Bridging.h in Headers */ = {isa = PBXBuildFile; fileRef = EF5168A658A60BEC4359BFEF /* APAddressBook-Bridging.h */; };
-		28127826EBA1BA509EC05C44 /* APSocialProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = A2D363D92E4415DD4F488F21 /* APSocialProfile.h */; };
-		333381ED16F01BB29E4DD346 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2226D897FB0F42348A03FF8A /* Foundation.framework */; };
-		3D2255EFF772AD653ABA8BB1 /* APContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 206BAD62DA0103F0DFFA1D7A /* APContact.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		7089FB6A5EAEE397D48269E6 /* APSocialProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BC395EA9704E883301B257 /* APSocialProfile.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		841CD3426E114CC8F3C29EF4 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F30DC804A626ECD59152939 /* AddressBook.framework */; };
-		86F546AFCE03E9F7551B24ED /* APAddressBook.h in Headers */ = {isa = PBXBuildFile; fileRef = A603512DC1B17994040CECA1 /* APAddressBook.h */; };
-		94FB19EC39E2B8002F47B188 /* APTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = FD7BC5A25C6A24A268BA913A /* APTypes.h */; };
-		9D988FA4C53A93AFBFB7F7D8 /* Pods-APAddressBook-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4607C401DB0A266CD2B71E65 /* Pods-APAddressBook-dummy.m */; };
-		9E05D6E441024E3E88FC4068 /* APAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 183DCCBFE9C92E3785889812 /* APAddress.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		A6CFBC449FE0A34CEA84B728 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46908BA6CC875ADD71769AAE /* Pods-dummy.m */; };
-		AB135041D4F0A16638364ACA /* APPhoneWithLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = B141CF630EC445C727F24E66 /* APPhoneWithLabel.h */; };
-		B1D3DB99B4B002632DD19959 /* APAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C7EE38AE68CE9D0D96E4DE /* APAddressBook.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		C3EA100F9E653BBB121CF06F /* APPhoneWithLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5AFE84CBA2968444FABB18 /* APPhoneWithLabel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		D3BD84667A22E5C8EFE5C8CD /* APContact.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5EFE33D2A9D7DED5EC40B /* APContact.h */; };
-		D4C792BF633B7A4E406C125E /* APAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = 30A9B21CA6D9AFE4D4CF0D29 /* APAddress.h */; };
+		011F0DC0B497724E118FB3C1 /* APAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F7350CDCD1AE17A08FAD4F /* APAddressBook.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0295CFAB474D394466E188E2 /* APSocialProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C2158D674B187D09D1A3E0 /* APSocialProfile.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		089878A1A3A02DADBE8F4C59 /* APAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = 09BE4A4A772A9909B79F1EB8 /* APAddress.h */; };
+		16B54FDC43A2DB1EAE17A63E /* APSocialProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = A97096926365A6AC7F44E3DB /* APSocialProfile.h */; };
+		1756C658405BB39346377DDE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C3FA9E17B47E9126CCB499 /* Foundation.framework */; };
+		21AA1AB7A6C174F5BDB26BC1 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A070155779A3BDB9FD3F8C1 /* Pods-dummy.m */; };
+		38F13870D7939113B6B137B1 /* APAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = EC75537DA239BE34DA5AAB51 /* APAddress.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		439650F1174A3275978B8375 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C3FA9E17B47E9126CCB499 /* Foundation.framework */; };
+		57B2E26C220E495EA47AFFE9 /* APContact.h in Headers */ = {isa = PBXBuildFile; fileRef = F2D59A9C5C8566B020E3B364 /* APContact.h */; };
+		6D9F84B8C6A8518BFDB8B6C5 /* APContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE29402E4FFC261F9F6775F /* APContact.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9202397E4C1CF8BC1CB65098 /* APAddressBook.h in Headers */ = {isa = PBXBuildFile; fileRef = C7A0C42E8FEDBA97283BF808 /* APAddressBook.h */; };
+		9BE8FC86684A252AD5A1ABEE /* APPhoneWithLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = B4103783C92600823F1C2C28 /* APPhoneWithLabel.h */; };
+		A5B315C29667C98C9D1D323C /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F19DE7D66CACC0DAB636DE /* AddressBook.framework */; };
+		C5B42E39E747506C5EE8A0B3 /* APTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F4E3A5E8F1447EE7543E1F3 /* APTypes.h */; };
+		DD3AA3E057E3C9539DDF7E84 /* APPhoneWithLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6741B7F619667D4A4EC10900 /* APPhoneWithLabel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E2126EB9A16AFA74B2A43EFC /* Pods-APAddressBook-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A78AFA19B92162D0ED97E5 /* Pods-APAddressBook-dummy.m */; };
+		EC25BBE797353259CD0B7519 /* APAddressBook-Bridging.h in Headers */ = {isa = PBXBuildFile; fileRef = 86C284219FEF3FB8010C21B5 /* APAddressBook-Bridging.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9EB98D7AE16497477C41055F /* PBXContainerItemProxy */ = {
+		F8FA711526B7DEDF9C68B44D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 965F6BFE854B53AE5EFC4AB9 /* Project object */;
+			containerPortal = F9EEFC0153650CDD712487F3 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AA71F6827796F5B314A3DCFE;
+			remoteGlobalIDString = 53505ABE1944FD60F5F4BDE7;
 			remoteInfo = "Pods-APAddressBook";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		047B0ED8B6C645874EF5C17C /* Pods-APAddressBook.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-APAddressBook.xcconfig"; sourceTree = "<group>"; };
-		0A037E3F61211A3544733B20 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		16F0F6705FCDC5CF8178EA85 /* Pods-APAddressBook-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-APAddressBook-Private.xcconfig"; sourceTree = "<group>"; };
-		183DCCBFE9C92E3785889812 /* APAddress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = APAddress.m; path = Pod/Core/APAddress.m; sourceTree = "<group>"; };
-		1F30DC804A626ECD59152939 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AddressBook.framework; sourceTree = DEVELOPER_DIR; };
-		206BAD62DA0103F0DFFA1D7A /* APContact.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = APContact.m; path = Pod/Core/APContact.m; sourceTree = "<group>"; };
-		2226D897FB0F42348A03FF8A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		30A9B21CA6D9AFE4D4CF0D29 /* APAddress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APAddress.h; path = Pod/Core/APAddress.h; sourceTree = "<group>"; };
-		35DE961B951F45A0B0A9EC97 /* libPods-APAddressBook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-APAddressBook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DD5EFE33D2A9D7DED5EC40B /* APContact.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APContact.h; path = Pod/Core/APContact.h; sourceTree = "<group>"; };
-		4607C401DB0A266CD2B71E65 /* Pods-APAddressBook-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-APAddressBook-dummy.m"; sourceTree = "<group>"; };
-		46908BA6CC875ADD71769AAE /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		53F99DB78E31BEF3216DE38E /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		58459529C39AA44EABF55449 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
-		8162665FDC482DD6805B53C7 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		822621778809002E95875D83 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DE3440D93C6FAD088A5A472 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		91C7EE38AE68CE9D0D96E4DE /* APAddressBook.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = APAddressBook.m; path = Pod/Core/APAddressBook.m; sourceTree = "<group>"; };
-		95604DA36F9003A72FA87B73 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A2D363D92E4415DD4F488F21 /* APSocialProfile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APSocialProfile.h; path = Pod/Core/APSocialProfile.h; sourceTree = "<group>"; };
-		A603512DC1B17994040CECA1 /* APAddressBook.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APAddressBook.h; path = Pod/Core/APAddressBook.h; sourceTree = "<group>"; };
-		B141CF630EC445C727F24E66 /* APPhoneWithLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APPhoneWithLabel.h; path = Pod/Core/APPhoneWithLabel.h; sourceTree = "<group>"; };
-		B61A86CB6EE0429E6BC489DF /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		BFBD36C73B0BCF40E4B30A47 /* Pods-APAddressBook-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-APAddressBook-prefix.pch"; sourceTree = "<group>"; };
-		DA5AFE84CBA2968444FABB18 /* APPhoneWithLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = APPhoneWithLabel.m; path = Pod/Core/APPhoneWithLabel.m; sourceTree = "<group>"; };
-		EF5168A658A60BEC4359BFEF /* APAddressBook-Bridging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "APAddressBook-Bridging.h"; path = "Pod/Swift/APAddressBook-Bridging.h"; sourceTree = "<group>"; };
-		F0BC395EA9704E883301B257 /* APSocialProfile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = APSocialProfile.m; path = Pod/Core/APSocialProfile.m; sourceTree = "<group>"; };
-		FD7BC5A25C6A24A268BA913A /* APTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APTypes.h; path = Pod/Core/APTypes.h; sourceTree = "<group>"; };
+		09BE4A4A772A9909B79F1EB8 /* APAddress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APAddress.h; path = Pod/Core/APAddress.h; sourceTree = "<group>"; };
+		1A070155779A3BDB9FD3F8C1 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		40CB08E965FACE84D58A1208 /* Pods-APAddressBook.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-APAddressBook.xcconfig"; sourceTree = "<group>"; };
+		48C2158D674B187D09D1A3E0 /* APSocialProfile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = APSocialProfile.m; path = Pod/Core/APSocialProfile.m; sourceTree = "<group>"; };
+		4BFF4BBEB32B02FF6E4C457B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		6037BCD2FCA2B1A248EB6E0F /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		6043B4748000AA8A50DCDE43 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		61A78AFA19B92162D0ED97E5 /* Pods-APAddressBook-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-APAddressBook-dummy.m"; sourceTree = "<group>"; };
+		62F7350CDCD1AE17A08FAD4F /* APAddressBook.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = APAddressBook.m; path = Pod/Core/APAddressBook.m; sourceTree = "<group>"; };
+		6741B7F619667D4A4EC10900 /* APPhoneWithLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = APPhoneWithLabel.m; path = Pod/Core/APPhoneWithLabel.m; sourceTree = "<group>"; };
+		6B52ABCF422ED6D5BD6A5E15 /* Pods-APAddressBook-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-APAddressBook-prefix.pch"; sourceTree = "<group>"; };
+		6F4E3A5E8F1447EE7543E1F3 /* APTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APTypes.h; path = Pod/Core/APTypes.h; sourceTree = "<group>"; };
+		86C284219FEF3FB8010C21B5 /* APAddressBook-Bridging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "APAddressBook-Bridging.h"; path = "Pod/Swift/APAddressBook-Bridging.h"; sourceTree = "<group>"; };
+		8B036BC801BBD636FB6FE9CB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		94149D6382ABAA3A029518AD /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96C3FA9E17B47E9126CCB499 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9EE29402E4FFC261F9F6775F /* APContact.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = APContact.m; path = Pod/Core/APContact.m; sourceTree = "<group>"; };
+		9FC146B01BC59A7B81D80278 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		A97096926365A6AC7F44E3DB /* APSocialProfile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APSocialProfile.h; path = Pod/Core/APSocialProfile.h; sourceTree = "<group>"; };
+		B4103783C92600823F1C2C28 /* APPhoneWithLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APPhoneWithLabel.h; path = Pod/Core/APPhoneWithLabel.h; sourceTree = "<group>"; };
+		BD545778F21059560A80B572 /* libPods-APAddressBook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-APAddressBook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7A0C42E8FEDBA97283BF808 /* APAddressBook.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APAddressBook.h; path = Pod/Core/APAddressBook.h; sourceTree = "<group>"; };
+		CCA384E7774D018939544EE5 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D8F19DE7D66CACC0DAB636DE /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AddressBook.framework; sourceTree = DEVELOPER_DIR; };
+		DE364D2B114AC3A1A9D5A29D /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		EC75537DA239BE34DA5AAB51 /* APAddress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = APAddress.m; path = Pod/Core/APAddress.m; sourceTree = "<group>"; };
+		F2D59A9C5C8566B020E3B364 /* APContact.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APContact.h; path = Pod/Core/APContact.h; sourceTree = "<group>"; };
+		F4E6D6A6AEC808AACCA6B05D /* Pods-APAddressBook-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-APAddressBook-Private.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5FA6EAD7EDD42F22904B76DC /* Frameworks */ = {
+		AABDAF02C601E2F6CC75DB26 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1283758E8B1C991632580E7D /* Foundation.framework in Frameworks */,
+				A5B315C29667C98C9D1D323C /* AddressBook.framework in Frameworks */,
+				439650F1174A3275978B8375 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7D82E0DF0FD6C5153102A996 /* Frameworks */ = {
+		E83C7229CA8D76403DD305D1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				841CD3426E114CC8F3C29EF4 /* AddressBook.framework in Frameworks */,
-				333381ED16F01BB29E4DD346 /* Foundation.framework in Frameworks */,
+				1756C658405BB39346377DDE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		02012B37704A3F4EAFDD4AE2 = {
+		2099F9229321E63535F9A599 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
-				95604DA36F9003A72FA87B73 /* Podfile */,
-				BF5A771175E3AA997ACC1EDA /* Frameworks */,
-				DD0484C53427B02FB0A567A3 /* Pods */,
-				F9DE02EDAE0129DA5E121F10 /* Products */,
-				320AEADBB751A63BEF8ABDCD /* Targets Support Files */,
+				86C284219FEF3FB8010C21B5 /* APAddressBook-Bridging.h */,
 			);
+			name = Swift;
 			sourceTree = "<group>";
 		};
-		320AEADBB751A63BEF8ABDCD /* Targets Support Files */ = {
+		280B1BD17F0BEF05F60579E9 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CC25EF3BF1E2ED6FE8706153 /* Pods */,
+				6DE15EAB73E206B469550AE3 /* Pods */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		668383B287BFB69FD78D22B6 /* APAddressBook */ = {
+		644AB0C28EB96AA20CBD9F1B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CB0665E09478DDA48236B1AF /* Core */,
-				B4FBCD5967A44D3F014C9518 /* Support Files */,
-				E2A6613547970265B0FCE27A /* Swift */,
+				6973EF1210054B5DAA34E779 /* APAddressBook */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		696D44C23B31AED4B61293DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B036BC801BBD636FB6FE9CB /* libPods.a */,
+				BD545778F21059560A80B572 /* libPods-APAddressBook.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6973EF1210054B5DAA34E779 /* APAddressBook */ = {
+			isa = PBXGroup;
+			children = (
+				82D89376BDD0D6FC80E0CC34 /* Core */,
+				EBA8C2C1EC48EAD922A5D0A7 /* Support Files */,
+				2099F9229321E63535F9A599 /* Swift */,
 			);
 			path = APAddressBook;
 			sourceTree = "<group>";
 		};
-		6988E9BA3FDAA4419FB84F29 /* iOS */ = {
+		6DE15EAB73E206B469550AE3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1F30DC804A626ECD59152939 /* AddressBook.framework */,
-				2226D897FB0F42348A03FF8A /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		B4FBCD5967A44D3F014C9518 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				047B0ED8B6C645874EF5C17C /* Pods-APAddressBook.xcconfig */,
-				16F0F6705FCDC5CF8178EA85 /* Pods-APAddressBook-Private.xcconfig */,
-				4607C401DB0A266CD2B71E65 /* Pods-APAddressBook-dummy.m */,
-				BFBD36C73B0BCF40E4B30A47 /* Pods-APAddressBook-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-APAddressBook";
-			sourceTree = "<group>";
-		};
-		BF5A771175E3AA997ACC1EDA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6988E9BA3FDAA4419FB84F29 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CB0665E09478DDA48236B1AF /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				30A9B21CA6D9AFE4D4CF0D29 /* APAddress.h */,
-				183DCCBFE9C92E3785889812 /* APAddress.m */,
-				A603512DC1B17994040CECA1 /* APAddressBook.h */,
-				91C7EE38AE68CE9D0D96E4DE /* APAddressBook.m */,
-				3DD5EFE33D2A9D7DED5EC40B /* APContact.h */,
-				206BAD62DA0103F0DFFA1D7A /* APContact.m */,
-				B141CF630EC445C727F24E66 /* APPhoneWithLabel.h */,
-				DA5AFE84CBA2968444FABB18 /* APPhoneWithLabel.m */,
-				A2D363D92E4415DD4F488F21 /* APSocialProfile.h */,
-				F0BC395EA9704E883301B257 /* APSocialProfile.m */,
-				FD7BC5A25C6A24A268BA913A /* APTypes.h */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		CC25EF3BF1E2ED6FE8706153 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				53F99DB78E31BEF3216DE38E /* Pods-acknowledgements.markdown */,
-				B61A86CB6EE0429E6BC489DF /* Pods-acknowledgements.plist */,
-				46908BA6CC875ADD71769AAE /* Pods-dummy.m */,
-				58459529C39AA44EABF55449 /* Pods-environment.h */,
-				8162665FDC482DD6805B53C7 /* Pods-resources.sh */,
-				8DE3440D93C6FAD088A5A472 /* Pods.debug.xcconfig */,
-				0A037E3F61211A3544733B20 /* Pods.release.xcconfig */,
+				CCA384E7774D018939544EE5 /* Pods-acknowledgements.markdown */,
+				DE364D2B114AC3A1A9D5A29D /* Pods-acknowledgements.plist */,
+				1A070155779A3BDB9FD3F8C1 /* Pods-dummy.m */,
+				6037BCD2FCA2B1A248EB6E0F /* Pods-environment.h */,
+				9FC146B01BC59A7B81D80278 /* Pods-resources.sh */,
+				6043B4748000AA8A50DCDE43 /* Pods.debug.xcconfig */,
+				4BFF4BBEB32B02FF6E4C457B /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
-		DD0484C53427B02FB0A567A3 /* Pods */ = {
+		82D89376BDD0D6FC80E0CC34 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				668383B287BFB69FD78D22B6 /* APAddressBook */,
+				09BE4A4A772A9909B79F1EB8 /* APAddress.h */,
+				EC75537DA239BE34DA5AAB51 /* APAddress.m */,
+				C7A0C42E8FEDBA97283BF808 /* APAddressBook.h */,
+				62F7350CDCD1AE17A08FAD4F /* APAddressBook.m */,
+				F2D59A9C5C8566B020E3B364 /* APContact.h */,
+				9EE29402E4FFC261F9F6775F /* APContact.m */,
+				B4103783C92600823F1C2C28 /* APPhoneWithLabel.h */,
+				6741B7F619667D4A4EC10900 /* APPhoneWithLabel.m */,
+				A97096926365A6AC7F44E3DB /* APSocialProfile.h */,
+				48C2158D674B187D09D1A3E0 /* APSocialProfile.m */,
+				6F4E3A5E8F1447EE7543E1F3 /* APTypes.h */,
 			);
-			name = Pods;
+			name = Core;
 			sourceTree = "<group>";
 		};
-		E2A6613547970265B0FCE27A /* Swift */ = {
+		AF2A3F60E0E648F200CB822A /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				EF5168A658A60BEC4359BFEF /* APAddressBook-Bridging.h */,
+				D8F19DE7D66CACC0DAB636DE /* AddressBook.framework */,
+				96C3FA9E17B47E9126CCB499 /* Foundation.framework */,
 			);
-			name = Swift;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		F9DE02EDAE0129DA5E121F10 /* Products */ = {
+		EBA8C2C1EC48EAD922A5D0A7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				822621778809002E95875D83 /* libPods.a */,
-				35DE961B951F45A0B0A9EC97 /* libPods-APAddressBook.a */,
+				40CB08E965FACE84D58A1208 /* Pods-APAddressBook.xcconfig */,
+				F4E6D6A6AEC808AACCA6B05D /* Pods-APAddressBook-Private.xcconfig */,
+				61A78AFA19B92162D0ED97E5 /* Pods-APAddressBook-dummy.m */,
+				6B52ABCF422ED6D5BD6A5E15 /* Pods-APAddressBook-prefix.pch */,
 			);
-			name = Products;
+			name = "Support Files";
+			path = "../Target Support Files/Pods-APAddressBook";
+			sourceTree = "<group>";
+		};
+		ED734C00714DF3025222631F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF2A3F60E0E648F200CB822A /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F174567376EA75B679A11B2D = {
+			isa = PBXGroup;
+			children = (
+				94149D6382ABAA3A029518AD /* Podfile */,
+				ED734C00714DF3025222631F /* Frameworks */,
+				644AB0C28EB96AA20CBD9F1B /* Pods */,
+				696D44C23B31AED4B61293DE /* Products */,
+				280B1BD17F0BEF05F60579E9 /* Targets Support Files */,
+			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		47A37C0B4D95B6CB8A131898 /* Headers */ = {
+		0117FF3B92224299F75E7DF3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4C792BF633B7A4E406C125E /* APAddress.h in Headers */,
-				1664D90B08704162F0BA4FC6 /* APAddressBook-Bridging.h in Headers */,
-				86F546AFCE03E9F7551B24ED /* APAddressBook.h in Headers */,
-				D3BD84667A22E5C8EFE5C8CD /* APContact.h in Headers */,
-				AB135041D4F0A16638364ACA /* APPhoneWithLabel.h in Headers */,
-				28127826EBA1BA509EC05C44 /* APSocialProfile.h in Headers */,
-				94FB19EC39E2B8002F47B188 /* APTypes.h in Headers */,
+				089878A1A3A02DADBE8F4C59 /* APAddress.h in Headers */,
+				EC25BBE797353259CD0B7519 /* APAddressBook-Bridging.h in Headers */,
+				9202397E4C1CF8BC1CB65098 /* APAddressBook.h in Headers */,
+				57B2E26C220E495EA47AFFE9 /* APContact.h in Headers */,
+				9BE8FC86684A252AD5A1ABEE /* APPhoneWithLabel.h in Headers */,
+				16B54FDC43A2DB1EAE17A63E /* APSocialProfile.h in Headers */,
+				C5B42E39E747506C5EE8A0B3 /* APTypes.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		10568222CE87032CFF0A8915 /* Pods */ = {
+		2BC88879FFCDC0C70D4FE3C8 /* Pods */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14EE1ADD5B3B10E31B0E39EF /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = BC5D55C6CD23F8344F1D7ABB /* Build configuration list for PBXNativeTarget "Pods" */;
 			buildPhases = (
-				824035A958EB07FA2B5B4F1A /* Sources */,
-				5FA6EAD7EDD42F22904B76DC /* Frameworks */,
+				1BB86875AFEC31DFC3F38546 /* Sources */,
+				E83C7229CA8D76403DD305D1 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B286F33747EA42B874554D9C /* PBXTargetDependency */,
+				7BFF3C12738B13ACDF0791B7 /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
-			productReference = 822621778809002E95875D83 /* libPods.a */;
+			productReference = 8B036BC801BBD636FB6FE9CB /* libPods.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		AA71F6827796F5B314A3DCFE /* Pods-APAddressBook */ = {
+		53505ABE1944FD60F5F4BDE7 /* Pods-APAddressBook */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6C4AA85EC6F00F3EF4AF2871 /* Build configuration list for PBXNativeTarget "Pods-APAddressBook" */;
+			buildConfigurationList = A4E11BE8EF8DD0F93313E669 /* Build configuration list for PBXNativeTarget "Pods-APAddressBook" */;
 			buildPhases = (
-				CE8CF7ABBCBFE3B0BBC7AF08 /* Sources */,
-				7D82E0DF0FD6C5153102A996 /* Frameworks */,
-				47A37C0B4D95B6CB8A131898 /* Headers */,
+				735FF5A1FE11AB462E1089A7 /* Sources */,
+				AABDAF02C601E2F6CC75DB26 /* Frameworks */,
+				0117FF3B92224299F75E7DF3 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -255,123 +255,75 @@
 			);
 			name = "Pods-APAddressBook";
 			productName = "Pods-APAddressBook";
-			productReference = 35DE961B951F45A0B0A9EC97 /* libPods-APAddressBook.a */;
+			productReference = BD545778F21059560A80B572 /* libPods-APAddressBook.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		965F6BFE854B53AE5EFC4AB9 /* Project object */ = {
+		F9EEFC0153650CDD712487F3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 			};
-			buildConfigurationList = 8C01F52C468F5AC4C63AEBEB /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 40C7C8515D3988E762203433 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 02012B37704A3F4EAFDD4AE2;
-			productRefGroup = F9DE02EDAE0129DA5E121F10 /* Products */;
+			mainGroup = F174567376EA75B679A11B2D;
+			productRefGroup = 696D44C23B31AED4B61293DE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				10568222CE87032CFF0A8915 /* Pods */,
-				AA71F6827796F5B314A3DCFE /* Pods-APAddressBook */,
+				2BC88879FFCDC0C70D4FE3C8 /* Pods */,
+				53505ABE1944FD60F5F4BDE7 /* Pods-APAddressBook */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		824035A958EB07FA2B5B4F1A /* Sources */ = {
+		1BB86875AFEC31DFC3F38546 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6CFBC449FE0A34CEA84B728 /* Pods-dummy.m in Sources */,
+				21AA1AB7A6C174F5BDB26BC1 /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE8CF7ABBCBFE3B0BBC7AF08 /* Sources */ = {
+		735FF5A1FE11AB462E1089A7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E05D6E441024E3E88FC4068 /* APAddress.m in Sources */,
-				B1D3DB99B4B002632DD19959 /* APAddressBook.m in Sources */,
-				3D2255EFF772AD653ABA8BB1 /* APContact.m in Sources */,
-				C3EA100F9E653BBB121CF06F /* APPhoneWithLabel.m in Sources */,
-				7089FB6A5EAEE397D48269E6 /* APSocialProfile.m in Sources */,
-				9D988FA4C53A93AFBFB7F7D8 /* Pods-APAddressBook-dummy.m in Sources */,
+				38F13870D7939113B6B137B1 /* APAddress.m in Sources */,
+				011F0DC0B497724E118FB3C1 /* APAddressBook.m in Sources */,
+				6D9F84B8C6A8518BFDB8B6C5 /* APContact.m in Sources */,
+				DD3AA3E057E3C9539DDF7E84 /* APPhoneWithLabel.m in Sources */,
+				0295CFAB474D394466E188E2 /* APSocialProfile.m in Sources */,
+				E2126EB9A16AFA74B2A43EFC /* Pods-APAddressBook-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B286F33747EA42B874554D9C /* PBXTargetDependency */ = {
+		7BFF3C12738B13ACDF0791B7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-APAddressBook";
-			target = AA71F6827796F5B314A3DCFE /* Pods-APAddressBook */;
-			targetProxy = 9EB98D7AE16497477C41055F /* PBXContainerItemProxy */;
+			target = 53505ABE1944FD60F5F4BDE7 /* Pods-APAddressBook */;
+			targetProxy = F8FA711526B7DEDF9C68B44D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		051E36CFB6EE68422747F46E /* Debug */ = {
+		6B50881A3AB810C52C1074C4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16F0F6705FCDC5CF8178EA85 /* Pods-APAddressBook-Private.xcconfig */;
+			baseConfigurationReference = 4BFF4BBEB32B02FF6E4C457B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-APAddressBook/Pods-APAddressBook-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		1961FCA5C950A81DC17159D3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8DE3440D93C6FAD088A5A472 /* Pods.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		849B4E75537258C31B179E71 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16F0F6705FCDC5CF8178EA85 /* Pods-APAddressBook-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-APAddressBook/Pods-APAddressBook-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		986F82E8B52162CCC01281AD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A037E3F61211A3544733B20 /* Pods.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -382,7 +334,41 @@
 			};
 			name = Release;
 		};
-		C82F756664159398808A8082 /* Debug */ = {
+		7F7B2729822C7F5EF41B1841 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A7E0678D643DC7C1A79CC8AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -414,78 +400,92 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		DCE8EB0B3D98D8161BA58196 /* Release */ = {
+		E7842558192818AA9AEA32AE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4E6D6A6AEC808AACCA6B05D /* Pods-APAddressBook-Private.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-APAddressBook/Pods-APAddressBook-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
+		};
+		E9AF9AAE1A641C2FD7717FE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6043B4748000AA8A50DCDE43 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F92A8BD3748BB10B1E5ECB34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4E6D6A6AEC808AACCA6B05D /* Pods-APAddressBook-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-APAddressBook/Pods-APAddressBook-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		14EE1ADD5B3B10E31B0E39EF /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		40C7C8515D3988E762203433 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1961FCA5C950A81DC17159D3 /* Debug */,
-				986F82E8B52162CCC01281AD /* Release */,
+				A7E0678D643DC7C1A79CC8AE /* Debug */,
+				7F7B2729822C7F5EF41B1841 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6C4AA85EC6F00F3EF4AF2871 /* Build configuration list for PBXNativeTarget "Pods-APAddressBook" */ = {
+		A4E11BE8EF8DD0F93313E669 /* Build configuration list for PBXNativeTarget "Pods-APAddressBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				051E36CFB6EE68422747F46E /* Debug */,
-				849B4E75537258C31B179E71 /* Release */,
+				F92A8BD3748BB10B1E5ECB34 /* Debug */,
+				E7842558192818AA9AEA32AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8C01F52C468F5AC4C63AEBEB /* Build configuration list for PBXProject "Pods" */ = {
+		BC5D55C6CD23F8344F1D7ABB /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C82F756664159398808A8082 /* Debug */,
-				DCE8EB0B3D98D8161BA58196 /* Release */,
+				E9AF9AAE1A641C2FD7717FE9 /* Debug */,
+				6B50881A3AB810C52C1074C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 965F6BFE854B53AE5EFC4AB9 /* Project object */;
+	rootObject = F9EEFC0153650CDD712487F3 /* Project object */;
 }

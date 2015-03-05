@@ -9,10 +9,16 @@
 import UIKit
 
 //styles
-let labelFont = UIFont(name: "Helvetica-Bold", size: ptp(36))
+let labelFont = UIFont(name: "Roboto-Bold", size: ptp(36))
+let roboto = UIFont(name: "Roboto-Regular", size: ptp(36))
+let font = UIFont(name: "Roboto-Bold", size: ptp(36))
+let boldFont = UIFont(name: "Roboto-Bold", size: ptp(36))
 
-//colors 
+//colors
 let darkGray = UIColor.fromRGB(0x4A4A4A)
+let gray = UIColor.fromRGB(0x5E5E5E)
+let blueColor = UIColor.fromRGB(0x1293F5)
+let greenColor = UIColor.fromRGB(0x6EBE78)
 
 // converts pixels (from your design, in sketch) into points
 func ptp(float: CGFloat) -> CGFloat {

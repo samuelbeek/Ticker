@@ -12,7 +12,8 @@ class User: NSObject {
 
     var firstName: String!
     var lastName: String!
-    var phoneNumber: AnyObject!
+    var status: String!
+    var phoneNumber: NSArray!
     var favourite: Bool!
     var tickerMember: Bool!
 }
