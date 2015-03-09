@@ -197,15 +197,17 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
         //connect sell to tableview
         var cell = tableView.dequeueReusableCellWithIdentifier("FriendCell") as? FriendCell
         
-        if cell == nil {
-            println("nil cell")
-            UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "FriendCell")
-        }
+//        if cell == nil {
+//            println("nil cell")
+//            UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "FriendCell")
+//        }
         
-        println(friends[indexPath.row].firstName)
+        
+        println("\(friends[indexPath.row].firstName) - \(friends[indexPath.row].status)")
         cell?.askButton.tag = indexPath.row //TO DO: is there a better way?
         cell?.askButton.addTarget(self, action: "ask:", forControlEvents: UIControlEvents.TouchUpInside)
         cell?.user = friends[indexPath.row]
+        cell?.layout()
         return cell!
     }
     

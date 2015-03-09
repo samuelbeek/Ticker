@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0AD387CFE194DCE422F6DE6C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 154FFD4FA7745FBF0E1AC296 /* libPods.a */; };
 		7E93075D1AA8575D0069CCEF /* TickerTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E93075C1AA8575D0069CCEF /* TickerTextfield.swift */; };
 		7E93075F1AA8585C0069CCEF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E93075E1AA8585C0069CCEF /* HomeViewController.swift */; };
 		7EC79FDB1AA8A1D600A4C7EE /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EC79FC91AA8A1D600A4C7EE /* Roboto-Black.ttf */; };
@@ -41,6 +40,7 @@
 		7EFB65FF1AA84751004CDE1E /* StylesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB65FE1AA84751004CDE1E /* StylesHelper.swift */; };
 		7EFB66031AA84C79004CDE1E /* KaedeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB66011AA84C79004CDE1E /* KaedeTextField.swift */; };
 		7EFB66041AA84C79004CDE1E /* TextFieldsEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB66021AA84C79004CDE1E /* TextFieldsEffects.swift */; };
+		9288A82A343B22F86B6B0909 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E61DE78DDE275D39713A733 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		154FFD4FA7745FBF0E1AC296 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E61DE78DDE275D39713A733 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E93075C1AA8575D0069CCEF /* TickerTextfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TickerTextfield.swift; path = Views/TickerTextfield.swift; sourceTree = "<group>"; };
 		7E93075E1AA8585C0069CCEF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Controllers/HomeViewController.swift; sourceTree = "<group>"; };
 		7EC79FC91AA8A1D600A4C7EE /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AD387CFE194DCE422F6DE6C /* libPods.a in Frameworks */,
+				9288A82A343B22F86B6B0909 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +118,7 @@
 		7A8E40295227FC2E5110EEC8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				154FFD4FA7745FBF0E1AC296 /* libPods.a */,
+				5E61DE78DDE275D39713A733 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
