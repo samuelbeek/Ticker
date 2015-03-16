@@ -1,3 +1,7 @@
 [submodule "branch"]
 	path = branch
 	url = https://github.com/Alamofire/Alamofire.git
+[submodule "SwiftHTTP"]
+	path = SwiftHTTP
+	url = https://github.com/daltoniam/SwiftHTTP.git
+	branch = swift-1.2

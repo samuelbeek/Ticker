@@ -21,7 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window                         = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window!.backgroundColor        = UIColor.whiteColor()
-        self.window!.rootViewController     = self.createUserViewController
+
+        if(NSUserDefaults.standardUserDefaults().objectForKey("userID") != nil){
+            var navigationController = UINavigationController(rootViewController: self.homeViewController)
+            self.window!.rootViewController = navigationController
+        } else {
+            self.window!.rootViewController     = self.createUserViewController
+        }
+        
         self.window!.makeKeyAndVisible()
 
         

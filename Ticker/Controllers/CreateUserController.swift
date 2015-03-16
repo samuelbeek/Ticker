@@ -50,7 +50,7 @@ class CreateUserController: UIViewController {
 
     func createAccount(){
         println("create account, name: \(nameField.text), phone: \(phoneField.text)")
-
+        createUser(nameField.text, phoneField.text)
         var home: HomeViewController = HomeViewController()
         var navigationController = UINavigationController(rootViewController: home)
         self.presentViewController(navigationController, animated: true, completion: nil)

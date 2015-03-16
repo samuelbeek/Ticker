@@ -27,10 +27,13 @@
 		7EC79FEA1AA8A1D600A4C7EE /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EC79FD81AA8A1D600A4C7EE /* RobotoCondensed-Light.ttf */; };
 		7EC79FEB1AA8A1D600A4C7EE /* RobotoCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EC79FD91AA8A1D600A4C7EE /* RobotoCondensed-LightItalic.ttf */; };
 		7EC79FEC1AA8A1D600A4C7EE /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EC79FDA1AA8A1D600A4C7EE /* RobotoCondensed-Regular.ttf */; };
+		7ECB0B3E1AB6E13800B29B19 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECB0B3D1AB6E13800B29B19 /* API.swift */; };
 		7ECE679C1AA84EFD00F2ACB6 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE679A1AA84EFD00F2ACB6 /* Device.swift */; };
 		7ECE679D1AA84EFD00F2ACB6 /* StatusBarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE679B1AA84EFD00F2ACB6 /* StatusBarHelper.swift */; };
 		7ED2680E1AA86AC900082972 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED2680D1AA86AC900082972 /* User.swift */; };
 		7ED268101AA86D0D00082972 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED2680F1AA86D0D00082972 /* FriendCell.swift */; };
+		7EE65C8C1AB6E2970090459F /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE65C851AB6E28B0090459F /* SwiftHTTP.framework */; };
+		7EE65C9C1AB6E5BD0090459F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE65C951AB6E5B50090459F /* SwiftyJSON.framework */; };
 		7EFB65D41AA8448F004CDE1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB65D31AA8448F004CDE1E /* AppDelegate.swift */; };
 		7EFB65DB1AA8448F004CDE1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EFB65DA1AA8448F004CDE1E /* Images.xcassets */; };
 		7EFB65DE1AA8448F004CDE1E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EFB65DC1AA8448F004CDE1E /* LaunchScreen.xib */; };
@@ -44,6 +47,62 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7EE65C841AB6E28B0090459F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EE65C7D1AB6E28B0090459F /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BFD901619C8D8B500DD99B6;
+			remoteInfo = SwiftHTTP;
+		};
+		7EE65C861AB6E28B0090459F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EE65C7D1AB6E28B0090459F /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BFD902119C8D8B500DD99B6;
+			remoteInfo = SwiftHTTPTests;
+		};
+		7EE65C881AB6E28B0090459F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EE65C7D1AB6E28B0090459F /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D958025919E6EEEB003C8218;
+			remoteInfo = SwiftHTTPOSX;
+		};
+		7EE65C8A1AB6E28B0090459F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EE65C7D1AB6E28B0090459F /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D958026319E6EEEB003C8218;
+			remoteInfo = SwiftHTTPOSXTests;
+		};
+		7EE65C941AB6E5B50090459F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EE65C8D1AB6E5B50090459F /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E4FEFDB19575BE100351305;
+			remoteInfo = "SwiftyJSON iOS";
+		};
+		7EE65C961AB6E5B50090459F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EE65C8D1AB6E5B50090459F /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E4FEFE619575BE100351305;
+			remoteInfo = SwiftyJSONTests;
+		};
+		7EE65C981AB6E5B50090459F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EE65C8D1AB6E5B50090459F /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 030B6CC31A6E16E800C2D4F1;
+			remoteInfo = "SwiftyJSON OSX";
+		};
+		7EE65C9A1AB6E5B50090459F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EE65C8D1AB6E5B50090459F /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 030B6CCD1A6E16E900C2D4F1;
+			remoteInfo = "SwiftyJSON OSXTests";
+		};
 		7EFB65E41AA8448F004CDE1E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7EFB65C61AA8448F004CDE1E /* Project object */;
@@ -75,11 +134,14 @@
 		7EC79FD81AA8A1D600A4C7EE /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
 		7EC79FD91AA8A1D600A4C7EE /* RobotoCondensed-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
 		7EC79FDA1AA8A1D600A4C7EE /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		7ECB0B3D1AB6E13800B29B19 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		7ECE679A1AA84EFD00F2ACB6 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Helpers/Device.swift; sourceTree = "<group>"; };
 		7ECE679B1AA84EFD00F2ACB6 /* StatusBarHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusBarHelper.swift; path = Helpers/StatusBarHelper.swift; sourceTree = "<group>"; };
 		7ED268081AA861AF00082972 /* Ticker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ticker-Bridging-Header.h"; sourceTree = "<group>"; };
 		7ED2680D1AA86AC900082972 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7ED2680F1AA86D0D00082972 /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendCell.swift; path = Views/FriendCell.swift; sourceTree = "<group>"; };
+		7EE65C7D1AB6E28B0090459F /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = SwiftHTTP/SwiftHTTP.xcodeproj; sourceTree = "<group>"; };
+		7EE65C8D1AB6E5B50090459F /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = "SwiftyJSON-xcode6.3/SwiftyJSON.xcodeproj"; sourceTree = "<group>"; };
 		7EFB65CE1AA8448F004CDE1E /* Ticker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ticker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EFB65D31AA8448F004CDE1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EFB65DA1AA8448F004CDE1E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -101,6 +163,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EE65C9C1AB6E5BD0090459F /* SwiftyJSON.framework in Frameworks */,
+				7EE65C8C1AB6E2970090459F /* SwiftHTTP.framework in Frameworks */,
 				9288A82A343B22F86B6B0909 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,7 +182,9 @@
 		7A8E40295227FC2E5110EEC8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7EE65C7D1AB6E28B0090459F /* SwiftHTTP.xcodeproj */,
 				5E61DE78DDE275D39713A733 /* libPods.a */,
+				7EE65C8D1AB6E5B50090459F /* SwiftyJSON.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -147,6 +213,28 @@
 			);
 			name = Fonts;
 			path = Resources/Fonts;
+			sourceTree = "<group>";
+		};
+		7EE65C7E1AB6E28B0090459F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7EE65C851AB6E28B0090459F /* SwiftHTTP.framework */,
+				7EE65C871AB6E28B0090459F /* SwiftHTTPTests.xctest */,
+				7EE65C891AB6E28B0090459F /* SwiftHTTP.framework */,
+				7EE65C8B1AB6E28B0090459F /* SwiftHTTPOSXTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7EE65C8E1AB6E5B50090459F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7EE65C951AB6E5B50090459F /* SwiftyJSON.framework */,
+				7EE65C971AB6E5B50090459F /* SwiftyJSONTests.xctest */,
+				7EE65C991AB6E5B50090459F /* SwiftyJSON.framework */,
+				7EE65C9B1AB6E5B50090459F /* SwiftyJSON OSXTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		7EFB65C51AA8448F004CDE1E = {
@@ -236,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				7ED2680D1AA86AC900082972 /* User.swift */,
+				7ECB0B3D1AB6E13800B29B19 /* API.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -344,6 +433,16 @@
 			mainGroup = 7EFB65C51AA8448F004CDE1E;
 			productRefGroup = 7EFB65CF1AA8448F004CDE1E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7EE65C7E1AB6E28B0090459F /* Products */;
+					ProjectRef = 7EE65C7D1AB6E28B0090459F /* SwiftHTTP.xcodeproj */;
+				},
+				{
+					ProductGroup = 7EE65C8E1AB6E5B50090459F /* Products */;
+					ProjectRef = 7EE65C8D1AB6E5B50090459F /* SwiftyJSON.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				7EFB65CD1AA8448F004CDE1E /* Ticker */,
@@ -351,6 +450,65 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7EE65C851AB6E28B0090459F /* SwiftHTTP.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftHTTP.framework;
+			remoteRef = 7EE65C841AB6E28B0090459F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7EE65C871AB6E28B0090459F /* SwiftHTTPTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftHTTPTests.xctest;
+			remoteRef = 7EE65C861AB6E28B0090459F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7EE65C891AB6E28B0090459F /* SwiftHTTP.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftHTTP.framework;
+			remoteRef = 7EE65C881AB6E28B0090459F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7EE65C8B1AB6E28B0090459F /* SwiftHTTPOSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftHTTPOSXTests.xctest;
+			remoteRef = 7EE65C8A1AB6E28B0090459F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7EE65C951AB6E5B50090459F /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = 7EE65C941AB6E5B50090459F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7EE65C971AB6E5B50090459F /* SwiftyJSONTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftyJSONTests.xctest;
+			remoteRef = 7EE65C961AB6E5B50090459F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7EE65C991AB6E5B50090459F /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = 7EE65C981AB6E5B50090459F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7EE65C9B1AB6E5B50090459F /* SwiftyJSON OSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyJSON OSXTests.xctest";
+			remoteRef = 7EE65C9A1AB6E5B50090459F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7EFB65CC1AA8448F004CDE1E /* Resources */ = {
@@ -438,6 +596,7 @@
 				7EFB65D41AA8448F004CDE1E /* AppDelegate.swift in Sources */,
 				7EFB66041AA84C79004CDE1E /* TextFieldsEffects.swift in Sources */,
 				7ED2680E1AA86AC900082972 /* User.swift in Sources */,
+				7ECB0B3E1AB6E13800B29B19 /* API.swift in Sources */,
 				7ECE679D1AA84EFD00F2ACB6 /* StatusBarHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

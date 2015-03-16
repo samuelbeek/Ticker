@@ -10,6 +10,8 @@
 	<string>Ticker</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>38D9009B322140394B9DA7467F68950B56B35FF5</key>
+		<string>https://github.com/daltoniam/SwiftHTTP.git</string>
 		<key>B913090D0C3942EC66013F2C3E5B3538B24CA69D</key>
 		<string>https://github.com/samuelbeek/Ticker.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>Ticker.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>38D9009B322140394B9DA7467F68950B56B35FF5</key>
+		<string>../SwiftHTTP</string>
 		<key>B913090D0C3942EC66013F2C3E5B3538B24CA69D</key>
 		<string>..</string>
 	</dict>
@@ -28,6 +32,14 @@
 	<string>B913090D0C3942EC66013F2C3E5B3538B24CA69D</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>38D9009B322140394B9DA7467F68950B56B35FF5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SwiftHTTP</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
