@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Ticker
+//  KeynodeExample
 //
-//  Created by Samuel Beek on 05-03-15.
-//  Copyright (c) 2015 Tosti. All rights reserved.
+//  Created by Kyohei Ito on 2014/12/14.
+//  Copyright (c) 2014年 kyohei_ito. All rights reserved.
 //
 
 import UIKit
@@ -12,32 +12,11 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let createUserViewController: CreateUserController = CreateUserController();
-    let homeViewController: HomeViewController = HomeViewController();
+
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
-        
-        self.window                         = UIWindow(frame: UIScreen.mainScreen().bounds)
-        self.window!.backgroundColor        = UIColor.whiteColor()
-
-        // if there's no user on the device, create a new one
-        if(NSUserDefaults.standardUserDefaults().objectForKey("userID") != nil){
-            
-            var navigationController = UINavigationController(rootViewController: self.homeViewController)
-            self.window!.rootViewController = navigationController
-            
-        } else {
-            
-            self.window!.rootViewController     = self.createUserViewController
-        }
-        
-        self.window!.makeKeyAndVisible()
-        
         return true
-    }
-    
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -63,5 +42,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
-
+}
 

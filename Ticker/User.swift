@@ -9,7 +9,6 @@
 import Foundation
 
 class User: NSObject {
-
     var firstName: String!
     var lastName: String!
     var status: String!

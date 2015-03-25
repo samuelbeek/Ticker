@@ -15,8 +15,9 @@ let font = UIFont(name: "Roboto-Bold", size: ptp(36))
 let boldFont = UIFont(name: "Roboto-Bold", size: ptp(36))
 
 //colors
-let darkGray = UIColor.fromRGB(0x4A4A4A)
+let darkGray = UIColor.fromRGB(0x434343)
 let gray = UIColor.fromRGB(0x5E5E5E)
+let lightGray = UIColor.fromRGB(0x979797)
 let blueColor = UIColor.fromRGB(0x1293F5)
 let greenColor = UIColor.fromRGB(0x6EBE78)
 

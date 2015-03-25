@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E67FF951AB7280B009B0BB2 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E67FF941AB7280B009B0BB2 /* SegmentedControl.swift */; };
 		7E93075D1AA8575D0069CCEF /* TickerTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E93075C1AA8575D0069CCEF /* TickerTextfield.swift */; };
 		7E93075F1AA8585C0069CCEF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E93075E1AA8585C0069CCEF /* HomeViewController.swift */; };
+		7EBADA4E1AB74EF500F71E60 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE65C951AB6E5B50090459F /* SwiftyJSON.framework */; };
+		7EBADA4F1AB74EF500F71E60 /* SwiftyJSON.framework in Embedded Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE65C951AB6E5B50090459F /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7EBADA521AB74F0E00F71E60 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE65C851AB6E28B0090459F /* SwiftHTTP.framework */; };
+		7EBADA531AB74F0E00F71E60 /* SwiftHTTP.framework in Embedded Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE65C851AB6E28B0090459F /* SwiftHTTP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7EC79FDB1AA8A1D600A4C7EE /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EC79FC91AA8A1D600A4C7EE /* Roboto-Black.ttf */; };
 		7EC79FDC1AA8A1D600A4C7EE /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EC79FCA1AA8A1D600A4C7EE /* Roboto-BlackItalic.ttf */; };
 		7EC79FDD1AA8A1D600A4C7EE /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EC79FCB1AA8A1D600A4C7EE /* Roboto-Bold.ttf */; };
@@ -47,6 +52,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7EBADA501AB74EF500F71E60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EE65C8D1AB6E5B50090459F /* SwiftyJSON.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E4FEFDA19575BE100351305;
+			remoteInfo = "SwiftyJSON iOS";
+		};
+		7EBADA541AB74F0E00F71E60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EE65C7D1AB6E28B0090459F /* SwiftHTTP.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BFD901519C8D8B500DD99B6;
+			remoteInfo = SwiftHTTP;
+		};
 		7EE65C841AB6E28B0090459F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7EE65C7D1AB6E28B0090459F /* SwiftHTTP.xcodeproj */;
@@ -112,8 +131,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7E67FF751AB715FE009B0BB2 /* Embedded Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7EBADA531AB74F0E00F71E60 /* SwiftHTTP.framework in Embedded Frameworks */,
+				7EBADA4F1AB74EF500F71E60 /* SwiftyJSON.framework in Embedded Frameworks */,
+			);
+			name = "Embedded Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5E61DE78DDE275D39713A733 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E67FF941AB7280B009B0BB2 /* SegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		7E93075C1AA8575D0069CCEF /* TickerTextfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TickerTextfield.swift; path = Views/TickerTextfield.swift; sourceTree = "<group>"; };
 		7E93075E1AA8585C0069CCEF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Controllers/HomeViewController.swift; sourceTree = "<group>"; };
 		7EC79FC91AA8A1D600A4C7EE /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
@@ -142,6 +177,10 @@
 		7ED2680F1AA86D0D00082972 /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendCell.swift; path = Views/FriendCell.swift; sourceTree = "<group>"; };
 		7EE65C7D1AB6E28B0090459F /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = SwiftHTTP/SwiftHTTP.xcodeproj; sourceTree = "<group>"; };
 		7EE65C8D1AB6E5B50090459F /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = "SwiftyJSON-xcode6.3/SwiftyJSON.xcodeproj"; sourceTree = "<group>"; };
+		7EF71B521AB743F200E3F39E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7EF71B541AB743F900E3F39E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7EF71B561AB743FF00E3F39E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		7EF71B581AB7440C00E3F39E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		7EFB65CE1AA8448F004CDE1E /* Ticker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ticker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EFB65D31AA8448F004CDE1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EFB65DA1AA8448F004CDE1E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -163,6 +202,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EBADA521AB74F0E00F71E60 /* SwiftHTTP.framework in Frameworks */,
+				7EBADA4E1AB74EF500F71E60 /* SwiftyJSON.framework in Frameworks */,
 				7EE65C9C1AB6E5BD0090459F /* SwiftyJSON.framework in Frameworks */,
 				7EE65C8C1AB6E2970090459F /* SwiftHTTP.framework in Frameworks */,
 				9288A82A343B22F86B6B0909 /* libPods.a in Frameworks */,
@@ -182,6 +223,10 @@
 		7A8E40295227FC2E5110EEC8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7EF71B581AB7440C00E3F39E /* libsqlite3.dylib */,
+				7EF71B561AB743FF00E3F39E /* libz.dylib */,
+				7EF71B541AB743F900E3F39E /* SystemConfiguration.framework */,
+				7EF71B521AB743F200E3F39E /* CoreData.framework */,
 				7EE65C7D1AB6E28B0090459F /* SwiftHTTP.xcodeproj */,
 				5E61DE78DDE275D39713A733 /* libPods.a */,
 				7EE65C8D1AB6E5B50090459F /* SwiftyJSON.xcodeproj */,
@@ -332,6 +377,7 @@
 		7EFB65F81AA84506004CDE1E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7E67FF941AB7280B009B0BB2 /* SegmentedControl.swift */,
 				7E93075C1AA8575D0069CCEF /* TickerTextfield.swift */,
 				7ED2680F1AA86D0D00082972 /* FriendCell.swift */,
 			);
@@ -375,10 +421,13 @@
 				7EFB65CB1AA8448F004CDE1E /* Frameworks */,
 				7EFB65CC1AA8448F004CDE1E /* Resources */,
 				972B159B2BF2476EC3FBF64A /* Copy Pods Resources */,
+				7E67FF751AB715FE009B0BB2 /* Embedded Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7EBADA511AB74EF500F71E60 /* PBXTargetDependency */,
+				7EBADA551AB74F0E00F71E60 /* PBXTargetDependency */,
 			);
 			name = Ticker;
 			productName = Ticker;
@@ -595,6 +644,7 @@
 				7E93075F1AA8585C0069CCEF /* HomeViewController.swift in Sources */,
 				7EFB65D41AA8448F004CDE1E /* AppDelegate.swift in Sources */,
 				7EFB66041AA84C79004CDE1E /* TextFieldsEffects.swift in Sources */,
+				7E67FF951AB7280B009B0BB2 /* SegmentedControl.swift in Sources */,
 				7ED2680E1AA86AC900082972 /* User.swift in Sources */,
 				7ECB0B3E1AB6E13800B29B19 /* API.swift in Sources */,
 				7ECE679D1AA84EFD00F2ACB6 /* StatusBarHelper.swift in Sources */,
@@ -612,6 +662,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7EBADA511AB74EF500F71E60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwiftyJSON iOS";
+			targetProxy = 7EBADA501AB74EF500F71E60 /* PBXContainerItemProxy */;
+		};
+		7EBADA551AB74F0E00F71E60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftHTTP;
+			targetProxy = 7EBADA541AB74F0E00F71E60 /* PBXContainerItemProxy */;
+		};
 		7EFB65E51AA8448F004CDE1E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7EFB65CD1AA8448F004CDE1E /* Ticker */;
@@ -714,8 +774,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GENERATE_MASTER_OBJECT_FILE = YES;
 				INFOPLIST_FILE = Ticker/resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Ticker/Vendor/Library",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Pods-APAddressBook\"",
+					"-framework",
+					"\"AddressBook\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Ticker/Ticker-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -728,8 +803,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GENERATE_MASTER_OBJECT_FILE = YES;
 				INFOPLIST_FILE = Ticker/resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Ticker/Vendor/Library",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Pods-APAddressBook\"",
+					"-framework",
+					"\"AddressBook\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Ticker/Ticker-Bridging-Header.h";
 			};

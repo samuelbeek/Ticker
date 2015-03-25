@@ -13,13 +13,44 @@ import MessageUI
 class HomeViewController : UITableViewController, UITableViewDelegate, MFMessageComposeViewControllerDelegate, UITextFieldDelegate, UIActionSheetDelegate {
     let addressBook = APAddressBook()
     var friends : [User] = []
+    var contacts = [String: User]()
+    var phonesArray = [String]()
     var createBar: UIView!
     var statusField: TickerTextField!
     var selectedRow: Int!
-    
+    var filters: SegmentedControl!
+    var updateButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureKeyboard()
+        
+        trackScreen("home")
+        
+        // important: register the class of our cell as the main cell
+        tableView.rowHeight = ptp(150)
+        tableView.registerClass(FriendCell.self, forCellReuseIdentifier: "FriendCell")
+        
+
+        
+        self.filters                 = SegmentedControl(frame: CGRectMake(0,0, self.view.frame.width, ptp(134)))
+        filters.items                = ["contacts","favorites"]
+        filters.selectedLabelColor   = greenColor
+        filters.backgroundColor      = UIColor.fromRGB(0xdddddd)
+        filters.unselectedLabelColor = darkGray
+        filters.font                 = boldFont
+        filters.layer.borderWidth    = 0
+        filters.selectedIndex        = 0
+        filters.addTarget(self, action: "filterDidChange:", forControlEvents: .ValueChanged)
+        
+        
+        var headerView : UIView = UIView(frame: CGRectMake(0,0,self.view.frame.width, ptp(134)))
+        headerView.addSubview(filters)
+        
+        self.tableView.tableHeaderView = headerView
+        self.tableView.tableHeaderView?.layoutMargins = UIEdgeInsetsMake(0, 0, 0, 0)
+        self.tableView.layer.borderWidth  = 0
         
         //navigationBar Styling
         if let nav = self.navigationController {
@@ -27,42 +58,81 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
             //nav.hidesBarsOnTap = true
             nav.navigationBarHidden = false
             nav.navigationBar.translucent = true
-            nav.navigationBar.topItem?.title = "Contacts"
+            nav.navigationBar.topItem?.title = "Ticker"
             nav.navigationBar.barTintColor = blueColor
             nav.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: font!]
             nav.popToRootViewControllerAnimated(true)
             
             //to make sure its always on top; the create bar should be added by the navigation controller
-            createBar = UIView(frame: CGRectMake(0, self.view.frame.size.height - ptp(52), self.view.frame.size.width, ptp(300)))
+            createBar = UIView(frame: CGRectMake(0, self.view.frame.size.height - ptp(42), self.view.frame.size.width, ptp(300)))
             createBar.backgroundColor = blueColor
             
-            statusField = TickerTextField(frame: CGRectMake(ptp(15), ptp(15), createBar.frame.width - ptp(30), ptp(70)))
+            statusField = TickerTextField(frame: CGRectMake(ptp(2), ptp(2), createBar.frame.width - ptp(80), ptp(90)))
             statusField.layer.borderWidth = 0
-            statusField.placeholder = "update your status"
-            statusField.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.1)
+            statusField.font = boldFont
+            statusField.attributedPlaceholder = NSAttributedString(string:"What are you up to?",
+                attributes:[NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: boldFont!])
+            statusField.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0)
             statusField.delegate = self
+            
+            self.updateButton = UIButton(frame: CGRectMake(createBar.frame.width - ptp(44), ptp(30), ptp(19), ptp(37)))
+            updateButton.setImage(UIImage(named: "updateIcon"), forState: UIControlState.Normal)
+            updateButton.addTarget(self, action: "updateStatus", forControlEvents: .TouchUpInside)
+            updateButton.alpha = 0
+            createBar.addSubview(updateButton)
             createBar.addSubview(statusField)
             nav.view.addSubview(createBar)
         }
         
         self.tableView.delegate = self
-        
-        // important: register the class of our cell as the main cell
-        tableView.registerClass(FriendCell.self, forCellReuseIdentifier: "FriendCell")
-        tableView.rowHeight = ptp(120)
-        
+        // because the header view is on top of the cells
+
         configureAddressBook()
-        loadContacts()
+        loadContacts(false)
+        
+        let inset = UIEdgeInsetsMake(20, 0, 0, 0);
+       // self.tableView.contentInset = inset;
+
     }
     
-    func loadContacts(){
+    func animateCreateBar(height: CGFloat){
+        UIView.animateWithDuration(0.1, animations: { () -> Void in
+            self.createBar.frame.origin.y = self.view.frame.size.height - (height + ptp(96))
+            self.statusField.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(1.0)
+            self.updateButton.alpha = 1
+            
+        })
+
+    }
+    
+    func finishEditing() {
+        UIView.animateWithDuration(0.1, animations: { () -> Void in
+            self.createBar.frame.origin.y = self.view.frame.size.height - (ptp(100))
+            self.statusField.text = ""
+            self.statusField.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0)
+            self.updateButton.alpha = 0
+
+        })
+        self.tableView.userInteractionEnabled = true
+    }
+
+    
+    func loadContacts(favorite: Bool){
+        
+        // get favorites if they exist
+        var favorites : [String] = []
+        if (NSUserDefaults.standardUserDefaults().objectForKey("favorites") != nil) {
+            favorites = NSUserDefaults.standardUserDefaults().objectForKey("favorites") as! [String]
+        }
+        self.contacts = [String: User]()
+        self.phonesArray = []
         self.addressBook.loadContacts(
             { (contacts: [AnyObject]!, error: NSError!) in
                 if (contacts != nil) {
                     
                     // get contact information
                     for contact in contacts {
-
+                        
                         var user: User = User()
                         var firstName = "\(contact.firstName)"
                         var lastName = "\(contact.lastName)"
@@ -71,31 +141,56 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
                         // if it's nil, set to none
                         if (firstName == "nil") { firstName = ""}
                         if (lastName == "nil") { lastName = "" }
-
                         
                         user.firstName = firstName
                         user.lastName = lastName
                         user.phoneNumber = contact.phones
                         user.favourite = false
                         user.tickerMember = false
-                        if(count(firstName) % 5 == 0){
-                            user.status = "Drinking @ De Pels"
-                        }
-                        // if the user has no first or last name (i.e. is a company 
-                        // or unknown user) don't save it
                         if(!(firstName == "" && lastName == "")) {
-                            self.friends.append(user)
+                            var phoneNumber = user.phoneNumber[0] as! String
+                            if(!favorite) {
+                                self.phonesArray.append(phoneNumber)
+                                self.contacts[phoneNumber] = user
+                            } else {
+                                if(contains(favorites, phoneNumber)){
+                                    self.phonesArray.append(phoneNumber)
+                                    self.contacts[phoneNumber] = user
+                                }
+                            }
                         }
                     }
                     
-                    println(self.friends)
-                    self.tableView.reloadData()
+                    getStatusses(self.phonesArray, self.contacts){ contacts in
+                        let newContacts : [User] = [User](contacts.values)
+                        self.friends = newContacts.sorted { $0.firstName < $1.firstName }
+                        dispatch_async(dispatch_get_main_queue(),{
+                            self.tableView.reloadData()
+                        });
+                    }
+                    
                 }
                 else if (error != nil) {
                     // show error
                 }
         })
     }
+    
+    func filterDidChange(sender: AnyObject?){
+            switch filters.selectedIndex
+            {
+            case 0:
+                trackScreen("home")
+                loadContacts(false)
+            case 1:
+                trackScreen("favorites")
+                loadContacts(true)
+                
+            default:
+                break;
+            }
+    }
+
     
     // MARK: Actions
     
@@ -109,6 +204,7 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
         actions.cancelButtonIndex = 0;
         actions.showInView(self.navigationController?.view)
         actions.delegate = self
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
 
     }
     
@@ -126,11 +222,20 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
                 sendMessage("Yo!", phoneNumber: phone)
             case 3:
                 println("adding to favorites")
+                addFavorites(phone) 
             default:
                 println("default")
         }
     }
 
+    func updateStatus(){
+        var status = statusField.text
+        statusField.resignFirstResponder()
+        finishEditing()
+        statusField.resignFirstResponder()
+
+        postStatus(status)
+    }
     
     func ask(sender: UIButton){
         println(friends[sender.tag].firstName)
@@ -195,19 +300,21 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         //connect sell to tableview
-        var cell = tableView.dequeueReusableCellWithIdentifier("FriendCell") as? FriendCell
+        var cell  = tableView.dequeueReusableCellWithIdentifier("FriendCell") as? FriendCell
         
-//        if cell == nil {
-//            println("nil cell")
-//            UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "FriendCell")
-//        }
+        if cell == nil {
+            println("nil cell")
+            cell = FriendCell(style: UITableViewCellStyle.Default, reuseIdentifier: "FriendCell")
+        }
         
         
         println("\(friends[indexPath.row].firstName) - \(friends[indexPath.row].status)")
-        cell?.askButton.tag = indexPath.row //TO DO: is there a better way?
-        cell?.askButton.addTarget(self, action: "ask:", forControlEvents: UIControlEvents.TouchUpInside)
-        cell?.user = friends[indexPath.row]
-        cell?.layout()
+        cell!.askButton.tag = indexPath.row //TO DO: is there a better way?
+        cell!.askButton.addTarget(self, action: "ask:", forControlEvents: UIControlEvents.TouchUpInside)
+        cell!.user = friends[indexPath.row]
+        cell!.layout()
+        cell!.layoutIfNeeded()
+        
         return cell!
     }
     
@@ -228,6 +335,10 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
         //load only first name, last name and phone, for pictures, add: | APContactField.Thumbnail
         self.addressBook.fieldsMask = APContactField.Default
 
+    }
+    
+    func configureKeyboard() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
     }
     
     // MARK:  MFMessageViewController Delegate
@@ -254,27 +365,26 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
     //MARK: TextField Delegate
     func textFieldDidBeginEditing(textField: UITextField) {    //delegate method
         self.tableView.userInteractionEnabled = false
-        UIView.animateWithDuration(0.1, animations: { () -> Void in
-            self.createBar.frame.origin.y = self.view.frame.size.height - (ptp(700))
-        })
-
     }
     
     func textFieldShouldEndEditing(textField: UITextField) -> Bool {  //delegate method
-        UIView.animateWithDuration(0.1, animations: { () -> Void in
-            self.createBar.frame.origin.y = self.view.frame.size.height - (ptp(100))
-        })
-        self.tableView.userInteractionEnabled = true
-        return false
-    }
-    
-    func textFieldShouldReturn(textField: UITextField) -> Bool {   //delegate method
-        println("return")
         textField.resignFirstResponder()
-        
         return true
     }
-
-
     
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {   //delegate method
+        updateStatus()
+        statusField.resignFirstResponder()
+        finishEditing()
+        return false
+    }
+
+    func keyboardWillShow(notification: NSNotification) {
+        if let userInfo = notification.userInfo {
+            if let keyboardSize = (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+                animateCreateBar(keyboardSize.height)
+            }
+        }
+    }
 }
