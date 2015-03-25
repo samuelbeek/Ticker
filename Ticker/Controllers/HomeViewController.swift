@@ -27,6 +27,8 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
     var searchIsActive = false
     var searching = false
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

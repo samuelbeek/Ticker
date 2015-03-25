@@ -21,8 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window                         = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window!.backgroundColor        = UIColor.whiteColor()
-        if(NSUserDefaults.standardUserDefaults().objectForKey("applePushToken") != nil){
+        if(NSUserDefaults.standardUserDefaults().objectForKey("applePushToken") == nil){
             NSUserDefaults.standardUserDefaults().setObject("", forKey: "applePushToken")
+            NSUserDefaults.standardUserDefaults().synchronize()
         }
         // if there's no user on the device, create a new one
         if(NSUserDefaults.standardUserDefaults().objectForKey("userID") != nil){
@@ -50,9 +51,11 @@ func application(application: UIApplication, didRegisterForRemoteNotificationsWi
     var deviceString  = (("\(deviceToken)" as String).stringByReplacingOccurrencesOfString(" ", withString: "") as NSString)
     deviceString  = (("\(deviceString)" as String).stringByReplacingOccurrencesOfString("<", withString: "") as NSString)
     deviceString  = (("\(deviceString)" as String).stringByReplacingOccurrencesOfString(">", withString: "") as NSString)
-    
+
+    println("deviceString: \(deviceString)")
     
     NSUserDefaults.standardUserDefaults().setObject(deviceString, forKey: "applePushToken")
+    NSUserDefaults.standardUserDefaults().synchronize()
     updateUser()
 }
 

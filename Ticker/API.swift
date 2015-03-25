@@ -114,12 +114,12 @@ func updateUser(){
     var screenName : String     = NSUserDefaults.standardUserDefaults().objectForKey("screenName")! as! String
     var favorites : [String]    = NSUserDefaults.standardUserDefaults().objectForKey("favorites") as! [String]
     var status : String         = NSUserDefaults.standardUserDefaults().objectForKey("status")! as! String
-    var applePushToken : String = NSUserDefaults.standardUserDefaults().objectForKey("status")! as! String
+    var applePushToken : String = NSUserDefaults.standardUserDefaults().objectForKey("applePushToken")! as! String
     
     var request = HTTPTask()
     request.requestSerializer = JSONRequestSerializer()
     request.responseSerializer = JSONResponseSerializer()
-    let params: Dictionary<String,AnyObject> = ["id": userID, "screenName": screenName, "phoneNumber": phoneNumber, "statusMessage": status, "favorites" : favorites]
+    let params: Dictionary<String,AnyObject> = ["id": userID, "screenName": screenName, "phoneNumber": phoneNumber, "statusMessage": status, "favorites" : favorites, "applePushToken": applePushToken]
     request.PUT("\(apiURL)/user/\(userID)", parameters: params, success: {(response: HTTPResponse) in
         println(request)
         if let dict = response.responseObject as? Dictionary<String,AnyObject> {

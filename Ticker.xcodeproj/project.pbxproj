@@ -728,7 +728,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos8.3;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -763,7 +763,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos8.3;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -793,9 +793,10 @@
 					"\"AddressBook\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "63e30849-b8cc-40d2-b755-66e04f2444df";
+				PROVISIONING_PROFILE = "2e271208-5798-4805-a4da-2f2bfdb52c59";
 				SWIFT_OBJC_BRIDGING_HEADER = "Ticker/Ticker-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -805,8 +806,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tosti Software (YJTH4W98V2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tosti Software (YJTH4W98V2)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GENERATE_MASTER_OBJECT_FILE = YES;
 				INFOPLIST_FILE = Ticker/resources/Info.plist;
@@ -824,8 +825,9 @@
 					"\"AddressBook\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "63e30849-b8cc-40d2-b755-66e04f2444df";
+				PROVISIONING_PROFILE = "2e271208-5798-4805-a4da-2f2bfdb52c59";
 				SWIFT_OBJC_BRIDGING_HEADER = "Ticker/Ticker-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
