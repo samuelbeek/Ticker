@@ -10,9 +10,12 @@ import UIKit
 import MessageUI
 
 
-class HomeViewController : UITableViewController, UITableViewDelegate, MFMessageComposeViewControllerDelegate, UITextFieldDelegate, UIActionSheetDelegate {
+class HomeViewController : UITableViewController, UITableViewDelegate, MFMessageComposeViewControllerDelegate, UITextFieldDelegate, UIActionSheetDelegate, UISearchResultsUpdating, UISearchBarDelegate {
+    
     let addressBook = APAddressBook()
     var friends : [User] = []
+    var searchArray: [User] = []
+    var searchController : UISearchController = UISearchController()
     var contacts = [String: User]()
     var phonesArray = [String]()
     var createBar: UIView!
@@ -20,6 +23,7 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
     var selectedRow: Int!
     var filters: SegmentedControl!
     var updateButton: UIButton!
+    var searchIsActive = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +39,7 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
 
         
         self.filters                 = SegmentedControl(frame: CGRectMake(0,0, self.view.frame.width, ptp(134)))
-        filters.items                = ["contacts","favorites"]
+        filters.items                = ["favorites","contacts"]
         filters.selectedLabelColor   = greenColor
         filters.backgroundColor      = UIColor.fromRGB(0xdddddd)
         filters.unselectedLabelColor = darkGray
@@ -45,13 +49,14 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
         filters.addTarget(self, action: "filterDidChange:", forControlEvents: .ValueChanged)
         
         
-        var headerView : UIView = UIView(frame: CGRectMake(0,0,self.view.frame.width, ptp(134)))
+        var headerView : UIView = UIView(frame: CGRectMake(0,0,self.view.frame.width, ptp(226)))
+        headerView.backgroundColor = UIColor.whiteColor()
         headerView.addSubview(filters)
         
         self.tableView.tableHeaderView = headerView
         self.tableView.tableHeaderView?.layoutMargins = UIEdgeInsetsMake(0, 0, 0, 0)
         self.tableView.layer.borderWidth  = 0
-        
+        self.tableView.tableHeaderView?.clipsToBounds = true
         //navigationBar Styling
         if let nav = self.navigationController {
             //nav.hidesBarsOnSwipe = true
@@ -64,10 +69,11 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
             nav.popToRootViewControllerAnimated(true)
             
             //to make sure its always on top; the create bar should be added by the navigation controller
-            createBar = UIView(frame: CGRectMake(0, self.view.frame.size.height - ptp(42), self.view.frame.size.width, ptp(300)))
+            createBar = UIView(frame: CGRectMake(0, self.view.frame.size.height - ptp(52), self.view.frame.size.width, ptp(300)))
             createBar.backgroundColor = blueColor
             
-            statusField = TickerTextField(frame: CGRectMake(ptp(2), ptp(2), createBar.frame.width - ptp(80), ptp(90)))
+            statusField = TickerTextField(frame: CGRectMake(ptp(14), ptp(14), createBar.frame.width - ptp(80), ptp(71)))
+            statusField.layer.cornerRadius = ptp(13)
             statusField.layer.borderWidth = 0
             statusField.font = boldFont
             statusField.attributedPlaceholder = NSAttributedString(string:"What are you up to?",
@@ -82,13 +88,30 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
             createBar.addSubview(updateButton)
             createBar.addSubview(statusField)
             nav.view.addSubview(createBar)
+            
+            self.searchController = ({
+                
+                let controller = UISearchController(searchResultsController: nil)
+                controller.searchResultsUpdater = self
+                controller.hidesNavigationBarDuringPresentation = true
+                controller.dimsBackgroundDuringPresentation = false
+                controller.searchBar.searchBarStyle = .Minimal
+                controller.searchBar.frame.origin.y = ptp(134)
+                controller.searchBar.sizeToFit()
+                controller.searchBar.barTintColor = UIColor.fromRGB(0xEEEEEE)
+                controller.searchBar.delegate = self
+                headerView.insertSubview(controller.searchBar, aboveSubview: self.filters)
+                
+                return controller
+            })()
+
         }
         
         self.tableView.delegate = self
         // because the header view is on top of the cells
 
         configureAddressBook()
-        loadContacts(false)
+        loadContacts(true)
         
         let inset = UIEdgeInsetsMake(20, 0, 0, 0);
        // self.tableView.contentInset = inset;
@@ -169,6 +192,10 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
                         });
                     }
                     
+                    if (favorites.count == 0 && favorite == true){
+                        self.alert("no favorites", message: "you can add favorites in contacts")
+                    }
+                    
                 }
                 else if (error != nil) {
                     // show error
@@ -180,11 +207,11 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
             switch filters.selectedIndex
             {
             case 0:
-                trackScreen("home")
-                loadContacts(false)
-            case 1:
                 trackScreen("favorites")
                 loadContacts(true)
+            case 1:
+                trackScreen("home")
+                loadContacts(false)
                 
             default:
                 break;
@@ -293,8 +320,11 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
     }
     
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
-        // Return the number of rows in the section.
-        return friends.count;
+        if (searchController.active) {
+            return searchArray.count
+        } else {
+            return friends.count;
+        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -363,8 +393,8 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
     }
     
     //MARK: TextField Delegate
-    func textFieldDidBeginEditing(textField: UITextField) {    //delegate method
-        self.tableView.userInteractionEnabled = false
+    func textFieldDidBeginEditing(textField: UITextField) {
+            self.tableView.userInteractionEnabled = false
     }
     
     func textFieldShouldEndEditing(textField: UITextField) -> Bool {  //delegate method
@@ -381,10 +411,62 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
     }
 
     func keyboardWillShow(notification: NSNotification) {
-        if let userInfo = notification.userInfo {
-            if let keyboardSize = (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-                animateCreateBar(keyboardSize.height)
-            }
+        if(!searchIsActive) {
+            if let userInfo = notification.userInfo {
+                    if let keyboardSize = (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+                        animateCreateBar(keyboardSize.height)
+                    }
+                }
         }
     }
+    
+    func alert(title: String, message: String){
+        
+        let alertController = UIAlertController(title: title, message:
+            message, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController)
+    {
+        self.searchArray.removeAll(keepCapacity: false)
+        let searchPredicate = NSPredicate(format: "(firstName CONTAINS[c] %@) OR (lastName CONTAINS[c] %@)", searchController.searchBar.text)
+        let array : [User]  = (self.friends as NSArray).filteredArrayUsingPredicate(searchPredicate) as! [User]
+        self.searchArray = array
+        self.tableView.reloadData()
+    }
+    func searchBarShouldBeginEditing(searchBar: UISearchBar) -> Bool {
+        searchIsActive = true
+        
+        UIView.animateWithDuration(0.1, animations: {
+            searchBar.frame.origin.y = 0
+            self.filters.frame.size.height = 0
+        })
+        self.tableView.setContentOffset(CGPointZero, animated: true)
+        self.tableView.tableHeaderView!.frame.size.height = ptp(60)
+        
+        return true
+    }
+    
+    func searchBarDidEndEditing(searchBar: UISearchBar) -> Bool {
+        leaveSearch()
+        return true
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar){
+        leaveSearch()
+    }
+    
+    func leaveSearch() {
+        UIView.animateWithDuration(0.1, animations: {
+            self.filters.frame.size.height = ptp(134)
+            self.searchController.searchBar.frame.origin.y = ptp(174)
+            self.tableView.tableHeaderView?.frame.size.height = ptp(226)
+            
+        })
+        searchIsActive = false
+    }
+
 }
