@@ -21,7 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window                         = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window!.backgroundColor        = UIColor.whiteColor()
-
+        if(NSUserDefaults.standardUserDefaults().objectForKey("applePushToken") != nil){
+            NSUserDefaults.standardUserDefaults().setObject("", forKey: "applePushToken")
+        }
         // if there's no user on the device, create a new one
         if(NSUserDefaults.standardUserDefaults().objectForKey("userID") != nil){
             
@@ -38,7 +40,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    
+    
     }
+
+//MARK NOTIFICATIONS
+
+func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData!) {
+    var deviceString  = (("\(deviceToken)" as String).stringByReplacingOccurrencesOfString(" ", withString: "") as NSString)
+    deviceString  = (("\(deviceString)" as String).stringByReplacingOccurrencesOfString("<", withString: "") as NSString)
+    deviceString  = (("\(deviceString)" as String).stringByReplacingOccurrencesOfString(">", withString: "") as NSString)
+    
+    
+    NSUserDefaults.standardUserDefaults().setObject(deviceString, forKey: "applePushToken")
+    updateUser()
+}
+
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError!) {
+        println("Couldn't register: \(error)")
+    }
+
+    func application(application: UIApplication!, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings!) {
+        println("notifcation settings")
+    }
+
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: NSData) {
+        
+    }
+
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

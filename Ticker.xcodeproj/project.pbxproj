@@ -463,7 +463,7 @@
 				TargetAttributes = {
 					7EFB65CD1AA8448F004CDE1E = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = 8NXRWSB7KU;
+						DevelopmentTeam = YJTH4W98V2;
 					};
 					7EFB65E21AA8448F004CDE1E = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -774,7 +774,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Samuel Beek (82663MLCR5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Samuel Beek (82663MLCR5)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GENERATE_MASTER_OBJECT_FILE = YES;
 				INFOPLIST_FILE = Ticker/resources/Info.plist;
@@ -792,6 +793,7 @@
 					"\"AddressBook\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "63e30849-b8cc-40d2-b755-66e04f2444df";
 				SWIFT_OBJC_BRIDGING_HEADER = "Ticker/Ticker-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -804,6 +806,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GENERATE_MASTER_OBJECT_FILE = YES;
 				INFOPLIST_FILE = Ticker/resources/Info.plist;
@@ -821,6 +824,7 @@
 					"\"AddressBook\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "63e30849-b8cc-40d2-b755-66e04f2444df";
 				SWIFT_OBJC_BRIDGING_HEADER = "Ticker/Ticker-Bridging-Header.h";
 			};
 			name = Release;

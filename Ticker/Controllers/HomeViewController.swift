@@ -16,6 +16,7 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
     var friends : [User] = []
     var searchArray: [User] = []
     var searchController : UISearchController = UISearchController()
+    var headerView : UIView!
     var contacts = [String: User]()
     var phonesArray = [String]()
     var createBar: UIView!
@@ -24,6 +25,7 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
     var filters: SegmentedControl!
     var updateButton: UIButton!
     var searchIsActive = false
+    var searching = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +37,7 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
         // important: register the class of our cell as the main cell
         tableView.rowHeight = ptp(150)
         tableView.registerClass(FriendCell.self, forCellReuseIdentifier: "FriendCell")
-        
+        tableView.autoresizesSubviews = true
 
         
         self.filters                 = SegmentedControl(frame: CGRectMake(0,0, self.view.frame.width, ptp(134)))
@@ -49,7 +51,7 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
         filters.addTarget(self, action: "filterDidChange:", forControlEvents: .ValueChanged)
         
         
-        var headerView : UIView = UIView(frame: CGRectMake(0,0,self.view.frame.width, ptp(226)))
+        self.headerView = UIView(frame: CGRectMake(0,0,self.view.frame.width, ptp(226)))
         headerView.backgroundColor = UIColor.whiteColor()
         headerView.addSubview(filters)
         
@@ -100,11 +102,11 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
                 controller.searchBar.sizeToFit()
                 controller.searchBar.barTintColor = UIColor.fromRGB(0xEEEEEE)
                 controller.searchBar.delegate = self
-                headerView.insertSubview(controller.searchBar, aboveSubview: self.filters)
+                self.headerView.insertSubview(controller.searchBar, aboveSubview: self.filters)
                 
                 return controller
             })()
-
+            
         }
         
         self.tableView.delegate = self
@@ -115,6 +117,10 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
         
         let inset = UIEdgeInsetsMake(20, 0, 0, 0);
        // self.tableView.contentInset = inset;
+        UIApplication.sharedApplication().registerForRemoteNotifications()
+        
+        let settings = UIUserNotificationSettings(forTypes: UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound, categories: nil)
+        UIApplication.sharedApplication().registerUserNotificationSettings(settings)
 
     }
     
@@ -141,7 +147,8 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
 
     
     func loadContacts(favorite: Bool){
-        
+        enableSearch(favorite)
+
         // get favorites if they exist
         var favorites : [String] = []
         if (NSUserDefaults.standardUserDefaults().objectForKey("favorites") != nil) {
@@ -165,8 +172,8 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
                         if (firstName == "nil") { firstName = ""}
                         if (lastName == "nil") { lastName = "" }
                         
-                        user.firstName = firstName
-                        user.lastName = lastName
+                        user.firstName = firstName as! String
+                        user.lastName  = lastName as! String
                         user.phoneNumber = contact.phones
                         user.favourite = false
                         user.tickerMember = false
@@ -209,15 +216,30 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
             case 0:
                 trackScreen("favorites")
                 loadContacts(true)
+
             case 1:
                 trackScreen("home")
                 loadContacts(false)
-                
             default:
                 break;
             }
     }
 
+    func enableSearch(enable: Bool){
+        var offset : CGFloat = 110
+        if (enable == false) {
+            offset  = 0
+        }
+        UIView.animateWithDuration(0.1, animations: {
+            self.tableView.tableHeaderView?.frame.size.height = ptp(240-offset)
+            self.headerView.frame.size.height = ptp(240-offset)
+        })
+        self.tableView.tableHeaderView = self.headerView
+
+        self.tableView.setNeedsLayout()
+        self.tableView.setNeedsDisplay()
+    }
+    
     
     // MARK: Actions
     
@@ -237,7 +259,12 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
     
     func actionSheet(actions: UIActionSheet, clickedButtonAtIndex buttonIndex: Int){
         println(buttonIndex)
-        var phone = friends[selectedRow].phoneNumber[0] as! String
+        var phone = ""
+        if(searchController.active){
+            phone = searchArray[selectedRow].phoneNumber[0] as! String
+        } else {
+            phone = friends[selectedRow].phoneNumber[0] as! String
+        }
         println("phone")
         println(phone)
         
@@ -288,7 +315,6 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
         UIApplication.sharedApplication().openURL(url)
     }
 
-    
     func sendMessage(message: String, phoneNumber: AnyObject){
         dispatch_async(dispatch_get_main_queue()) {
             var messageController : MFMessageComposeViewController = MFMessageComposeViewController()
@@ -341,7 +367,11 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
         println("\(friends[indexPath.row].firstName) - \(friends[indexPath.row].status)")
         cell!.askButton.tag = indexPath.row //TO DO: is there a better way?
         cell!.askButton.addTarget(self, action: "ask:", forControlEvents: UIControlEvents.TouchUpInside)
-        cell!.user = friends[indexPath.row]
+        if(!searchController.active) {
+            cell!.user = friends[indexPath.row]
+        } else {
+            cell!.user = searchArray[indexPath.row]
+        }
         cell!.layout()
         cell!.layoutIfNeeded()
         
@@ -432,10 +462,13 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
     func updateSearchResultsForSearchController(searchController: UISearchController)
     {
         self.searchArray.removeAll(keepCapacity: false)
-        let searchPredicate = NSPredicate(format: "(firstName CONTAINS[c] %@) OR (lastName CONTAINS[c] %@)", searchController.searchBar.text)
-        let array : [User]  = (self.friends as NSArray).filteredArrayUsingPredicate(searchPredicate) as! [User]
-        self.searchArray = array
+        if (count(searchController.searchBar.text) > 0){
+            let searchPredicate = NSPredicate(format: "(firstName CONTAINS[c] %@)", "\(searchController.searchBar.text)")
+            let array : [User]  = (self.friends as NSArray).filteredArrayUsingPredicate(searchPredicate) as! [User]
+            self.searchArray = array
+        }
         self.tableView.reloadData()
+
     }
     func searchBarShouldBeginEditing(searchBar: UISearchBar) -> Bool {
         searchIsActive = true
@@ -443,9 +476,11 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
         UIView.animateWithDuration(0.1, animations: {
             searchBar.frame.origin.y = 0
             self.filters.frame.size.height = 0
+            self.tableView.tableHeaderView?.frame.size.height = ptp(240-90)
+            self.headerView.frame.size.height = ptp(240-90)
+
         })
-        self.tableView.setContentOffset(CGPointZero, animated: true)
-        self.tableView.tableHeaderView!.frame.size.height = ptp(60)
+        self.tableView.tableHeaderView! = self.headerView
         
         return true
     }
@@ -463,9 +498,10 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
         UIView.animateWithDuration(0.1, animations: {
             self.filters.frame.size.height = ptp(134)
             self.searchController.searchBar.frame.origin.y = ptp(174)
-            self.tableView.tableHeaderView?.frame.size.height = ptp(226)
-            
+            self.tableView.tableHeaderView?.frame.size.height = ptp(240)
+            self.headerView.frame.size.height = ptp(240)
         })
+        self.tableView.tableHeaderView = self.headerView
         searchIsActive = false
     }
 

@@ -114,6 +114,7 @@ func updateUser(){
     var screenName : String     = NSUserDefaults.standardUserDefaults().objectForKey("screenName")! as! String
     var favorites : [String]    = NSUserDefaults.standardUserDefaults().objectForKey("favorites") as! [String]
     var status : String         = NSUserDefaults.standardUserDefaults().objectForKey("status")! as! String
+    var applePushToken : String = NSUserDefaults.standardUserDefaults().objectForKey("status")! as! String
     
     var request = HTTPTask()
     request.requestSerializer = JSONRequestSerializer()
