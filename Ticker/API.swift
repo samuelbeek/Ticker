@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import SwiftHTTP
 import SwiftyJSON
+import SwiftHTTP
 
 
 let apiURL = "http://54.77.128.20:8765"
@@ -50,7 +50,7 @@ func getStatusses(phoneNumbers: [String], contacts: [String: User] , callback: (
 }
 
 func poke(phoneNumber: String) {
-    var fromPhoneNumber : String  = NSUserDefaults.standardUserDefaults().objectForKey("phoneNumber")! as! String
+    var fromPhoneNumber : String  = NSUserDefaults.standardUserDefaults().objectForKey("phoneNumber")! as String
     var toPhoneNumber: String = phoneNumber
     
     var request = HTTPTask()
@@ -110,11 +110,11 @@ func createUser(name: String, phoneNumber: String, callback: (Bool) -> ()) -> ()
 
 func updateUser(){
     var userID : AnyObject!     = NSUserDefaults.standardUserDefaults().objectForKey("userID")
-    var phoneNumber : String    = NSUserDefaults.standardUserDefaults().objectForKey("phoneNumber")! as! String
-    var screenName : String     = NSUserDefaults.standardUserDefaults().objectForKey("screenName")! as! String
-    var favorites : [String]    = NSUserDefaults.standardUserDefaults().objectForKey("favorites") as! [String]
-    var status : String         = NSUserDefaults.standardUserDefaults().objectForKey("status")! as! String
-    var applePushToken : String = NSUserDefaults.standardUserDefaults().objectForKey("applePushToken")! as! String
+    var phoneNumber : String    = NSUserDefaults.standardUserDefaults().objectForKey("phoneNumber")! as String
+    var screenName : String     = NSUserDefaults.standardUserDefaults().objectForKey("screenName")! as String
+    var favorites : [String]    = NSUserDefaults.standardUserDefaults().objectForKey("favorites") as [String]
+    var status : String         = NSUserDefaults.standardUserDefaults().objectForKey("status")! as String
+    var applePushToken : String = NSUserDefaults.standardUserDefaults().objectForKey("applePushToken")! as String
     
     var request = HTTPTask()
     request.requestSerializer = JSONRequestSerializer()
@@ -136,7 +136,7 @@ func addFavorites(phone: String){
     // create new array if there is none
     var favorites : [String] = []
     if (NSUserDefaults.standardUserDefaults().objectForKey("favorites") != nil) {
-        favorites = NSUserDefaults.standardUserDefaults().objectForKey("favorites") as! [String]
+        favorites = NSUserDefaults.standardUserDefaults().objectForKey("favorites") as [String]
     }
     
     favorites.append(phone)

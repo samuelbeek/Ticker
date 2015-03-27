@@ -9,7 +9,6 @@
 import UIKit
 import MessageUI
 
-
 class HomeViewController : UITableViewController, UITableViewDelegate, MFMessageComposeViewControllerDelegate, UITextFieldDelegate, UIActionSheetDelegate, UISearchResultsUpdating, UISearchBarDelegate {
     
     let addressBook = APAddressBook()
@@ -154,7 +153,7 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
         // get favorites if they exist
         var favorites : [String] = []
         if (NSUserDefaults.standardUserDefaults().objectForKey("favorites") != nil) {
-            favorites = NSUserDefaults.standardUserDefaults().objectForKey("favorites") as! [String]
+            favorites = NSUserDefaults.standardUserDefaults().objectForKey("favorites") as [String]
         }
         self.contacts = [String: User]()
         self.phonesArray = []
@@ -174,13 +173,13 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
                         if (firstName == "nil") { firstName = ""}
                         if (lastName == "nil") { lastName = "" }
                         
-                        user.firstName = firstName as! String
-                        user.lastName  = lastName as! String
+                        user.firstName = firstName as String
+                        user.lastName  = lastName as String
                         user.phoneNumber = contact.phones
                         user.favourite = false
                         user.tickerMember = false
                         if(!(firstName == "" && lastName == "")) {
-                            var phoneNumber = user.phoneNumber[0] as! String
+                            var phoneNumber = user.phoneNumber[0] as String
                             if(!favorite) {
                                 self.phonesArray.append(phoneNumber)
                                 self.contacts[phoneNumber] = user
@@ -263,9 +262,9 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
         println(buttonIndex)
         var phone = ""
         if(searchController.active){
-            phone = searchArray[selectedRow].phoneNumber[0] as! String
+            phone = searchArray[selectedRow].phoneNumber[0] as String
         } else {
-            phone = friends[selectedRow].phoneNumber[0] as! String
+            phone = friends[selectedRow].phoneNumber[0] as String
         }
         println("phone")
         println(phone)
@@ -333,7 +332,7 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
             var recipients : NSArray = ["\(phoneNumber)"];
             
             messageController.messageComposeDelegate = self;
-            messageController.recipients = recipients as! [AnyObject];
+            messageController.recipients = recipients as [AnyObject];
             messageController.body = message;
             
             self.presentViewController(messageController, animated: true, completion: nil);
@@ -464,11 +463,9 @@ class HomeViewController : UITableViewController, UITableViewDelegate, MFMessage
     func updateSearchResultsForSearchController(searchController: UISearchController)
     {
         self.searchArray.removeAll(keepCapacity: false)
-        if (count(searchController.searchBar.text) > 0){
             let searchPredicate = NSPredicate(format: "(firstName CONTAINS[c] %@)", "\(searchController.searchBar.text)")
-            let array : [User]  = (self.friends as NSArray).filteredArrayUsingPredicate(searchPredicate) as! [User]
+            let array : [User]  = (self.friends as NSArray).filteredArrayUsingPredicate(searchPredicate!) as [User]
             self.searchArray = array
-        }
         self.tableView.reloadData()
 
     }
